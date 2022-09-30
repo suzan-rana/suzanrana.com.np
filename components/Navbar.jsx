@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <>
       <header className="flex justify-center">
-        <nav className="fixed top-2 mt-4 w-[95%] mx-auto md:max-w-[900px] flex px-6 py-4 justify-between rounded-md  shadow-md bg-opacity-60 backdrop-filter backdrop-blur-lg">
+        <nav className="fixed z-50 top-2 mt-4 w-[95%] mx-auto md:max-w-[900px] flex px-6 py-4 justify-between rounded-md  shadow-md bg-opacity-60 backdrop-filter backdrop-blur-lg">
           <ul className="flex flex-1 justify-between">
             <li className="text-lg">
               <Link href="/">Home</Link>
