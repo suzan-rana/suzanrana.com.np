@@ -21,11 +21,11 @@ export default function Home() {
       <div className="font-inter mx-auto dark:bg-[#1A1A1A] dark:text-white">
         <Navbar setDarkMode={setDarkMode} darkMode={darkMode}  />
         <Hero />
-        <section className="projects py-12 dark:bg-[#1A1A1A]" id="projects" ref="projectRef">
+        <section className="projects pt-12 dark:bg-[#1A1A1A]" id="projects">
           <Projects />
-          <p className="text-center font-clashDisplay text-2xl bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg  py-4 px-4">
+          <p className="text-center font-clashDisplay text-2xl bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg   px-4 py-6">
             <Link href="/">
-              <a className="cursor-pointer">
+              <a className="cursor-pointer underline hover:no-underline">
                 View all projects <BsArrowRight className="inline-block" />
               </a>
             </Link>

@@ -17,7 +17,7 @@ const Skills = () => {
         <h1 className="font-clashDisplay text-center text-5xl py-4 font-semibold">
           Skills
         </h1>
-        <p className="text-md leading-8 pb-8 text-center md:w-[65%] mx-auto">
+        <p className="md:text-lg text-gray-700 leading-8 pb-8 text-center md:w-[65%] mx-auto">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
           dolor ut natus quos molestiae vel assumenda cupiditate quae cum
           maiores.
