@@ -24,7 +24,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
             </li>
           </ul>
           <div className="w-[20%] sm:w-[50%] flex justify-end" id="night">
-            <BsFillMoonStarsFill className=" cursor-pointer text-2xl" onClick={() => ( setDarkMode(!darkMode))}/>
+            <BsFillMoonStarsFill className=" cursor-pointer text-2xl" onClick={() => {setDarkMode(!darkMode)} }/>
           </div>
         </nav>
       </header>

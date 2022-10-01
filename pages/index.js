@@ -12,10 +12,10 @@ import { useState } from "react";
 
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(true)
 
   return (
-    <div className={`${darkMode ? "dark" : ""} "scroll-smooth" `	}  >
+    <div className={`${darkMode ? "dark" : ""} "scroll-smooth" `	} id="rootElm" >
       <div className="font-inter mx-auto  dark:text-white dark:bg-slate-900">
         <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
         <Hero />
