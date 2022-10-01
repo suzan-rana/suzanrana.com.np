@@ -14,7 +14,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
               <Link href="/">Home</Link>
             </li>
             <li className="text-lg">
-              <Link href="/">Blogs</Link>
+              <Link href="/blogs">Blogs</Link>
             </li>
             <li className="text-lg">
               <Link smoothScroll="true"  href="#projects">Projects</Link>

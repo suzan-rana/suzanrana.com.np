@@ -13,7 +13,7 @@ const Hero = () => {
       <h4 className="text-lg md:text-2xl font-medium text-center py-2 md:py-4">
         Frontend Web Developer
       </h4>
-      <p className="text-center text-gray-800 text-sm md:w-[70%] text-slate dark:text-slate-400 mt-4 mb-8 mx-auto">
+      <p className="text-center text-gray-800 text-sm md:w-[70%] text-slate dark:text-slate-400 mt-4 mb-8 mx-auto leading-7">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
         necessitatibus molestiae itaque dicta, ratione sed minima repudiandae
         facilis ex dignissimos.

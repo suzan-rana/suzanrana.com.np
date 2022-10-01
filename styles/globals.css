@@ -64,3 +64,31 @@ html {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+::selection {
+    background: green;
+    color: white;
+    
+}
+
+  /* Works on Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #1E293B #0F172A;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 18px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #0F172A;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #1E293B;
+    border-radius: 20px;
+    border: 3px solid #0F172A;
+  } 
