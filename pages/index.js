@@ -3,37 +3,40 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
-import Skills from "../components/Skills";
+
 import About from "../components/About";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import { useState } from "react";
-// #1A1A1A
-// #242424
+
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  // if(darkMode) {
-  //   const projectRef = useRef()
-  //   projectRef.classList.toggle('dark:text-white')
-  // }
+
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="font-inter mx-auto dark:bg-[#1A1A1A] dark:text-white">
-        <Navbar setDarkMode={setDarkMode} darkMode={darkMode}  />
+      <div className="font-inter mx-auto  dark:text-white dark:bg-slate-900">
+        <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
         <Hero />
-        <section className="projects pt-12 dark:bg-[#1A1A1A]" id="projects">
+        <section
+          className={`dark-theme pt-12 dark:bg-slate-900 ${
+            darkMode === false && "projects"
+          }`}
+          id="projects"
+        >
           <Projects />
-          <p className="text-center font-clashDisplay text-2xl bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg   px-4 py-6">
+          <p className="text-center font-clashDisplay text-2xl bg-white bg-opacity-20 backdrop-filter dark:text-slate-400 backdrop-blur-lg   px-4 py-6">
             <Link href="/">
-              <a className="cursor-pointer underline hover:no-underline">
+              <a className="cursor-pointer underline hover:no-underline dark:text-white">
                 View all projects <BsArrowRight className="inline-block" />
               </a>
             </Link>
           </p>
         </section>
 
-        <Skills />
-        <div id="about">
+        <div id="about" className={`dark-theme pt-12 dark:bg-slate-900 ${
+            darkMode === false && "about"
+          }`}>
           <About />
         </div>
       </div>

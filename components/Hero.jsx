@@ -19,7 +19,7 @@ const Hero = () => {
         facilis ex dignissimos.
       </p>
       <div className="flex justify-center gap-6 mt-8 mb-16">
-        <a href="#about" className="border-[#4bba00] border-[1px] px-4 py-2 text-black rounded-md shadow-md cursor-pointer hover:bg-[#4bba00] hover:text-white dark:text-white">
+        <a href="#contact" className="border-[#4bba00] border-[1px] px-4 py-2 text-black rounded-md shadow-md cursor-pointer hover:bg-[#4bba00] hover:text-white dark:text-white">
           Contact me
         </a>
         <a className="bg-[#4bba00] px-4 py-2 text-white rounded-md shadow-md cursor-pointer">
