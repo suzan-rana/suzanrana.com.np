@@ -3,30 +3,31 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
-
 import About from "../components/About";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import { useState } from "react";
 
 
+
+
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={`${darkMode ? "dark" : ""} "scroll-smooth" `	}  >
       <div className="font-inter mx-auto  dark:text-white dark:bg-slate-900">
         <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
         <Hero />
         <section
-          className={`dark-theme pt-12 dark:bg-slate-900 ${
+          className={`dark-theme pt-6 md:pt-12 dark:bg-slate-900 ${
             darkMode === false && "projects"
           }`}
           id="projects"
         >
           <Projects />
           <p className="text-center font-clashDisplay text-2xl bg-white bg-opacity-20 backdrop-filter dark:text-slate-400 backdrop-blur-lg   px-4 py-6">
-            <Link href="/">
+            <Link href="/"  >
               <a className="cursor-pointer underline hover:no-underline dark:text-white">
                 View all projects <BsArrowRight className="inline-block" />
               </a>

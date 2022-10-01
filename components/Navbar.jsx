@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 // #1A1A1A
 // #242424
+
 const Navbar = ({darkMode, setDarkMode}) => {
   return (
     <>
@@ -16,7 +17,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
               <Link href="/">Blogs</Link>
             </li>
             <li className="text-lg">
-              <Link href="#projects">Projects</Link>
+              <Link smoothScroll="true"  href="#projects">Projects</Link>
             </li>
             <li className="text-lg">
               <Link href="#about">About</Link>
