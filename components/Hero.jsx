@@ -22,7 +22,7 @@ const Hero = () => {
         <a href="#contact" className="border-[#4bba00] border-[1px] px-4 py-2 text-black rounded-md shadow-md cursor-pointer hover:bg-[#4bba00] hover:text-white dark:text-white">
           Contact me
         </a>
-        <a className="bg-[#4bba00] px-4 py-2 text-white rounded-md shadow-md cursor-pointer">
+        <a className="bg-[#4bba00] px-4 py-2 text-white rounded-md shadow-md cursor-pointer hover:bg-transparent border-transparent hover:border-[#4bba00] border-[1px] hover:text-[#4bba00]">
           Resume
         </a>
       </div>
