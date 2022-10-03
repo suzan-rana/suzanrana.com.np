@@ -20,7 +20,7 @@ const Projects = ({darkMode}) => {
       </p>
       {/* boxes=================== */}
       <div className="flex flex-col lg:justify-between my-12 flex-wrap gap-12 md:flex-row   ">
-        <div className="w-[100%] shadow-md rounded-xl overflow-hidden px-6 py-6 lg:w-[45%] bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg dark:bg-slate-800">
+        <div className="w-[100%] shadow-md rounded-xl overflow-hidden px-6 py-6 lg:w-[45%] bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg dark:bg-slate-800 ">
           <Image src={Trello} className="rounded-md" />
           <h3 className="text-3xl font-semibold font-clashDisplay mt-4">
             Trello
