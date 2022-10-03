@@ -1,55 +1,34 @@
-
-import React from "react";
-import fs from "fs"
-import path from "path"
-import { serialize } from "next-mdx-remote"
-import matter from "gray-matter"
-
-
-const BlogItem = ({
-  frontMatter,
-  MdxDataSource,
-  slug
-}) => {
-
-  return (
-    <>
-      <div>Hello, world. {data}</div>
-      <button type="button" onClick={() => router.push("/")}>
-        Click me
-      </button>
-    </>
-  );
-};
+import { getAllSlugs, getBlogPost } from "../../helper/getData";
+import { MDXRemote } from "next-mdx-remote";
+import SyntaxHighlighter from 'react-syntax-highlighter'
 
 const getStaticPaths = async () => {
-  const allFiles = fs.readDirSync(path.join('posts'), "utf-8")
-  const paths = allFiles.map( fileName => {
+    const paths = getAllSlugs();
     return {
-      params: {
-        slug: fileName.replace(".mdx", "")
-      }
+       paths,
+        fallback: false,
     }
-  })
-  return {
-    paths,
-    
-  }
 
 }
-
-const getStaticProps = async ({ params: {slug}}) => {
-  const file = fs.readFileSync(path.join('posts', slug, ".mdx"),  "utf-8" )
-  const source = matter(file)
-  const { data: frontMatter, content } = source;
-  const MdxDataSource = serialize(content)
-
-  return {
-    props: {
-      frontMatter,
-      MdxDataSource,
-      slug
+const components= {SyntaxHighlighter}
+const getStaticProps = async ({params}) => {
+    const { slug } = params
+    const props = await getBlogPost(slug)
+    return {    
+        props,
     }
-  }
-
 }
+const BlogItem = ({ frontmatter, MDXData}) => {
+    const { title, description} = frontmatter
+    return(
+        <div>
+            <h1>{title}</h1>
+            <p>{description}</p>
+            <MDXRemote {...MDXData}  components={components} />
+        </div>
+
+    )
+}
+
+export default BlogItem;
+export { getStaticPaths, getStaticProps}
